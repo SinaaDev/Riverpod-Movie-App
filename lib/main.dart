@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:riverpod_movie_app/screens/splash_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(SplashScreen(onInitializationComplete: (){}));
 }
 
 class MyApp extends StatelessWidget {
@@ -9,6 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      home: Scaffold(),
+    );
   }
 }
