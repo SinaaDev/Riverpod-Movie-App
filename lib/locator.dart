@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:riverpod_movie_app/model/app_config.dart';
+import 'package:riverpod_movie_app/services/http_services.dart';
 
 final locator = GetIt.instance;
 
@@ -16,5 +17,9 @@ Future setupLocator() async {
       configData['BASE_IMAGE_API_URL'],
       configData['API_KEY'],
     ),
+  );
+
+  locator.registerSingleton<HTTPServices>(
+    HTTPServices(),
   );
 }
